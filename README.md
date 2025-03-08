@@ -29,6 +29,25 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run deploy`
+
+Deploys the built app to GitHub Pages.
+This command pushes the contents of the build folder to the gh-pages branch of your repository.
+Before running this command, ensure you have the following in package.json:
+```json
+"homepage": "https://your-github-username.github.io/your-repo-name",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
+
+Then, run:
+
+```bash
+npm run deploy
+```
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
